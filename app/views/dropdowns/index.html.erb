@@ -1,0 +1,21 @@
+<h1>Listing dropdowns</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dropdowns.each do |dropdown| %>
+  <tr>
+    <td><%= link_to 'Show', dropdown %></td>
+    <td><%= link_to 'Edit', edit_dropdown_path(dropdown) %></td>
+    <td><%= link_to 'Destroy', dropdown, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dropdown', new_dropdown_path %>
